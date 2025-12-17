@@ -1,16 +1,27 @@
-/* Step 1: Constrain and center the entire navbar's content */
-.navbar-container {
-  max-width: 600px; /* Use the width of your main content */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+/* Step 1: Use a media query to constrain and center the navbar's content
+ * ONLY on screens larger than the 'lg' breakpoint (992px).
+ * This allows the navbar to be full-width on mobile for the hamburger menu.
+ */
+@media (min-width: 992px) {
+  .navbar-container {
+    max-width: 600px; /* Constrain to the same width as your main content */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
-/* Step 2: Center the navigation links within the constrained container */
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1; /* Ensures it fills available space for centering */
+@media (max-width: 991px) {
+  /*
+   * This rule ensures the hamburger menu button is always displayed on small screens.
+   * Quarto's default behavior is to hide this button, so we're explicitly
+   * making sure it's visible.
+   */
+  .navbar-toggler {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Make the main navbar transparent */
@@ -87,7 +98,6 @@ body.quarto-dark code {
   color: #CCCCCC !important;
   border: 1px solid #444444 !important;
 }
-
 body.quarto-dark pre .co { /* comments */
   color: #888888 !important;
 }
@@ -100,7 +110,6 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
@@ -116,4 +125,19 @@ main.content {
 /* Ensure the title block is centered */
 .quarto-title-block {
   text-align: center !important;
+}
+
+/* =========================================================================
+ * Link Hover & Active States
+ * ========================================================================= */
+ 
+/* Add a translucent orange highlight on hover */
+a:hover {
+  background-color: rgba(255, 165, 0, 0.2); /* A semi-transparent light orange */
+  text-decoration: none; /* Prevents underline on hover */
+}
+
+/* Change link color to light orange when clicked (active) */
+a:active {
+  color: #FFA500 !important; /* Forces the color change to light orange */
 }

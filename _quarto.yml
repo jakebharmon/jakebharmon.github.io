@@ -20,6 +20,7 @@ website:
         href: https://bsky.app/profile/jakeharmon.bsky.social
       - icon: rss
         href: blog.xml
+    collapse-below: lg
         
 format:
   html:

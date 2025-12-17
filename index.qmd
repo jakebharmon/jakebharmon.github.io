@@ -7,3 +7,5 @@ page-layout: full
 [^1]: My preferred salutation following Alexander Graham Bell's example
 
 I am currently a graduate student studying Environmental Epidemiology at Georgia State University. This blog is for sharing my thoughts about Sacred Harp, literature, faith, social democracy, and other amalgamated interests of mine.
+
+[wikipedia](wikipedia.com)
