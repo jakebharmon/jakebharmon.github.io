@@ -1,0 +1,143 @@
+/* Step 1: Use a media query to constrain and center the navbar's content
+ * ONLY on screens larger than the 'lg' breakpoint (992px).
+ * This allows the navbar to be full-width on mobile for the hamburger menu.
+ */
+@media (min-width: 992px) {
+  .navbar-container {
+    max-width: 600px; /* Constrain to the same width as your main content */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  /*
+   * This rule ensures the hamburger menu button is always displayed on small screens.
+   * Quarto's default behavior is to hide this button, so we're explicitly
+   * making sure it's visible.
+   */
+  .navbar-toggler {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Make the main navbar transparent */
+#quarto-header .navbar {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Ensure the links are still visible on a transparent background */
+#quarto-header .navbar-nav .nav-link,
+#quarto-header .navbar-brand {
+  color: #0000FF !important; /* or a color that provides good contrast */
+}
+
+/* Adjust colors for hover to maintain contrast */
+#quarto-header .navbar-nav .nav-link:hover {
+  color: #a9a9a9 !important; /* A slightly different shade for feedback */
+}
+
+/* =========================================================================
+ * Base Typography & Colors
+ * ========================================================================= */
+
+:root {
+  /* Aged paper background */
+  --quarto-body-bg: #FFFEF5;
+  /* Dark text, not pure black */
+  --quarto-body-color: #333333;
+  /* Rich navy blue for links (like the book cover) */
+  --quarto-link-color: #000080;
+  /* Deep brick red for accents */
+  --sacred-harp-red: #A32924;
+}
+
+body {
+  font-family: Georgia, serif; /* Classic, book-like serif font */
+  line-height: 1.5;
+}
+
+/* =========================================================================
+ * Structural Elements
+ * ========================================================================= */
+
+/* Horizontal rule, styled as a red line to separate sections */
+hr {
+  height: 2px;
+  background-color: var(--sacred-harp-red);
+  border: none;
+  margin: 2rem 0;
+}
+
+/* Code blocks should be a contrasting, readable element */
+pre, code {
+  background-color: #F8F8F8 !important; /* Light gray background */
+  color: #333333 !important; /* Dark gray text */
+  border: 1px solid #E0E0E0 !important;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Correct syntax highlighting for readability in light mode */
+pre .co { /* comments */
+  color: #555555 !important;
+}
+pre .st { /* strings */
+  color: #924E7D !important; /* A visible and unique purplish color */
+}
+
+/* Correct syntax highlighting for readability in dark mode */
+body.quarto-dark pre,
+body.quarto-dark code {
+  background-color: #1A1A1A !important;
+  color: #CCCCCC !important;
+  border: 1px solid #444444 !important;
+}
+body.quarto-dark pre .co { /* comments */
+  color: #888888 !important;
+}
+body.quarto-dark pre .st { /* strings */
+  color: #A3C989 !important; /* A light, color-blind friendly green */
+}
+
+/* Links */
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Ensure the main content block is constrained and centered */
+main.content {
+  max-width: 600px; /* Use the same width as your navbar */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+}
+
+/* Ensure the title block is centered */
+.quarto-title-block {
+  text-align: center !important;
+}
+
+/* =========================================================================
+ * Link Hover & Active States
+ * ========================================================================= */
+ 
+/* Add a translucent orange highlight on hover */
+a:hover {
+  background-color: rgba(255, 165, 0, 0.2); /* A semi-transparent light orange */
+  text-decoration: none; /* Prevents underline on hover */
+}
+
+/* Change link color to light orange when clicked (active) */
+a:active {
+  color: #FFA500 !important; /* Forces the color change to light orange */
+}
