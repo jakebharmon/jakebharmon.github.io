@@ -1,1 +1,1 @@
-Sitemap: https://jharmon.xyz/sitemap.xml
+Sitemap: https://jakebharmon.github.io/sitemap.xml
