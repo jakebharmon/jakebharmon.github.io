@@ -6,7 +6,7 @@ page-layout: full
 website:
   title: "Jake Blues Harmon"
   favicon: jhb_monogram_favicon_32png.png
-  site-url: https://jharmon.xyz
+  site-url: https://jakebharmon.github.io
   description: "This is Jake Harmon's personal blog."
   search: false
   navbar:
@@ -16,8 +16,6 @@ website:
     right:
       - icon: github
         href: https://github.com/jakebharmon
-      - text: '{{< fa brands bluesky >}}'
-        href: https://bsky.app/profile/jakeharmon.bsky.social
       - icon: rss
         href: blog.xml
     collapse-below: lg

@@ -23,13 +23,18 @@ jobs:
           r-version: '4.2.0'
 
       - name: Install R Dependencies
-        uses: r-lib/actions/setup-renv@v2
-        with:
-          cache-version: 1
+        run: |
+          install.packages(c('rmarkdown', 'knitr', 'jsonlite'))
+        shell: Rscript {0}
 
-      - name: Render and Publish
-        uses: quarto-dev/quarto-actions/publish@v2
+      # Step 1: Just render the site (creates the _site folder)
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
+
+      # Step 2: Force deployment to gh-pages branch
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target: gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+          publish_branch: gh-pages
