@@ -361,16 +361,12 @@ Every tool I build, every report I automate, and every interview I conduct is sh
 
 ### Cross-Cultural Collaboration
 
-::: {.photo-placeholder}
+::: {.conference-photo}
 
-::: {.placeholder-icon}
-📷
-:::
+![Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference](images/cste_pacific_island.jpg){fig-alt="Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference" style="width:100%; border-radius:6px;"}
 
-Photo: Jake with Pacific Island epidemiologists at the CSTE Annual Conference
-
-::: {.placeholder-caption}
-Replace this block with your conference photo — update the `<img>` tag in the source file.
+::: {.photo-caption}
+With Pacific Island epidemiologists at the CSTE Annual Conference
 :::
 
 :::

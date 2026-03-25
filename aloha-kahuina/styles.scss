@@ -366,31 +366,24 @@ blockquote {
 }
 
 // ═══════════════════════════════════════════════════════════
-// PHOTO PLACEHOLDER
+// CONFERENCE PHOTO
 // ═══════════════════════════════════════════════════════════
 
-.photo-placeholder {
-  background: $sand-warm;
-  border: 2px dashed $sand-mid;
-  border-radius: 6px;
-  padding: 3rem 2rem;
-  text-align: center;
+.conference-photo {
   margin: 1.5rem 0;
-  color: $lava-soft;
-  font-style: italic;
-  
-  .placeholder-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.8rem;
-    opacity: 0.5;
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
   }
-  
-  .placeholder-caption {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: $forest-muted;
-    font-style: normal;
-    margin-top: 0.5rem;
+
+  .photo-caption {
+    font-size: 0.82rem;
+    color: $lava-soft;
+    font-style: italic;
+    text-align: center;
+    margin-top: 0.6rem;
   }
 }
 
