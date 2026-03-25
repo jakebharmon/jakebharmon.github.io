@@ -1,0 +1,559 @@
+/*-- scss:defaults --*/
+
+// ═══════════════════════════════════════════════════════════
+// HAWAIIAN MODERNIZATION — Color System
+// Inspired by volcanic forest canopy meeting Pacific sunset
+// ═══════════════════════════════════════════════════════════
+
+// Core palette
+$forest-deep:     #1B3A1F;
+$forest-mid:      #2D5016;
+$forest-light:    #4A7C3F;
+$forest-muted:    #6B8F63;
+
+$sunset-warm:     #D4763A;
+$sunset-bright:   #E8944D;
+$sunset-pale:     #F2C4A0;
+
+$ocean-teal:      #2A7B6F;
+$ocean-light:     #3CA898;
+
+$sand-white:      #FAF7F2;
+$sand-warm:       #F3EDE4;
+$sand-mid:        #E8DFD2;
+
+$lava-dark:       #1A1A1A;
+$lava-mid:        #3D3D3D;
+$lava-soft:       #6B6B6B;
+
+// Bootstrap variable overrides
+$body-bg:         $sand-white;
+$body-color:      $lava-dark;
+$link-color:      $ocean-teal;
+$primary:         $forest-mid;
+
+$font-family-sans-serif: "DM Sans", "Avenir Next", "Avenir", "Segoe UI", sans-serif;
+$headings-font-family:   "Playfair Display", "Georgia", "Times New Roman", serif;
+
+$font-size-base:   1.05rem;
+$line-height-base: 1.72;
+
+$headings-font-weight: 700;
+$headings-color:       $forest-deep;
+
+$toc-font-size: 0.82rem;
+
+/*-- scss:rules --*/
+
+// ═══════════════════════════════════════════════════════════
+// IMPORTS
+// ═══════════════════════════════════════════════════════════
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+// ═══════════════════════════════════════════════════════════
+// GLOBAL REFINEMENTS
+// ═══════════════════════════════════════════════════════════
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba($sunset-warm, 0.25);
+  color: $forest-deep;
+}
+
+// ═══════════════════════════════════════════════════════════
+// HERO BANNER
+// ═══════════════════════════════════════════════════════════
+
+.hero-banner {
+  background: linear-gradient(
+    135deg,
+    $forest-deep 0%,
+    $forest-mid 40%,
+    darken($ocean-teal, 8%) 100%
+  );
+  color: $sand-white;
+  padding: 3.5rem 2.5rem;
+  border-radius: 6px;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle texture overlay
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse at 85% 20%, rgba($sunset-warm, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse at 10% 80%, rgba($ocean-teal, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    color: $sand-white;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+
+  .hero-subtitle {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: rgba($sand-white, 0.85);
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tagline {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: $sunset-pale;
+    border-left: 3px solid $sunset-warm;
+    padding-left: 1rem;
+    margin-top: 1.2rem;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// SECTION HEADERS
+// ═══════════════════════════════════════════════════════════
+
+.section-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: $sunset-warm;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+h2 {
+  font-size: 1.85rem;
+  color: $forest-deep;
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $sand-mid;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: $forest-mid;
+  font-weight: 600;
+  margin-top: 1.8rem;
+}
+
+// ═══════════════════════════════════════════════════════════
+// NARRATIVE PROSE
+// ═══════════════════════════════════════════════════════════
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+.lead-text {
+  font-size: 1.18rem;
+  line-height: 1.8;
+  color: $lava-mid;
+  font-weight: 400;
+}
+
+.highlight-stat {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: $sunset-warm;
+}
+
+blockquote {
+  border-left: 4px solid $forest-light;
+  background: rgba($forest-light, 0.05);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-style: italic;
+  color: $lava-mid;
+}
+
+// ═══════════════════════════════════════════════════════════
+// PROJECT CARDS
+// ═══════════════════════════════════════════════════════════
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid $sand-mid;
+  border-radius: 6px;
+  padding: 1.8rem;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba($forest-deep, 0.08);
+    border-color: $forest-light;
+  }
+
+  .card-category {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $ocean-teal;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.3rem;
+    color: $forest-deep;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $lava-mid;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    background: $sand-warm;
+    color: $forest-mid;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: $ocean-teal;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: darken($ocean-teal, 10%);
+    }
+
+    &::after {
+      content: "→";
+      transition: transform 0.2s ease;
+    }
+
+    &:hover::after {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// IMPACT STAT BANNER
+// ═══════════════════════════════════════════════════════════
+
+.impact-banner {
+  background: linear-gradient(135deg, $forest-deep, darken($forest-mid, 5%));
+  color: $sand-white;
+  padding: 2rem 2rem;
+  border-radius: 6px;
+  margin: 2rem 0;
+  text-align: center;
+
+  .impact-number {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: $sunset-warm;
+    display: block;
+    line-height: 1.1;
+  }
+
+  .impact-label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba($sand-white, 0.85);
+    margin-top: 0.3rem;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// REACTABLE TABLE STYLING
+// ═══════════════════════════════════════════════════════════
+
+.rt-table {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 0.9rem !important;
+}
+
+.rt-th {
+  background: $forest-deep !important;
+  color: $sand-white !important;
+  font-weight: 600 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  border-bottom: 2px solid $sunset-warm !important;
+}
+
+.rt-td {
+  border-bottom: 1px solid $sand-mid !important;
+  padding: 0.7rem 0.8rem !important;
+}
+
+.rt-tr:hover .rt-td {
+  background: rgba($forest-light, 0.04) !important;
+}
+
+.rt-search {
+  border: 1px solid $sand-mid !important;
+  border-radius: 4px !important;
+  padding: 0.4rem 0.8rem !important;
+  font-family: "DM Sans", sans-serif !important;
+  
+  &:focus {
+    border-color: $ocean-teal !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba($ocean-teal, 0.15) !important;
+  }
+}
+
+// Tier badge colors
+.tier-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.18rem 0.55rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-block;
+  
+  &.federal   { background: rgba($forest-mid, 0.12); color: $forest-deep; }
+  &.state     { background: rgba($ocean-teal, 0.12); color: darken($ocean-teal, 10%); }
+  &.local     { background: rgba($sunset-warm, 0.12); color: darken($sunset-warm, 15%); }
+  &.community { background: rgba($forest-muted, 0.15); color: darken($forest-muted, 20%); }
+}
+
+// ═══════════════════════════════════════════════════════════
+// PHOTO PLACEHOLDER
+// ═══════════════════════════════════════════════════════════
+
+.photo-placeholder {
+  background: $sand-warm;
+  border: 2px dashed $sand-mid;
+  border-radius: 6px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: $lava-soft;
+  font-style: italic;
+  
+  .placeholder-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.5;
+  }
+  
+  .placeholder-caption {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $forest-muted;
+    font-style: normal;
+    margin-top: 0.5rem;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// EQUITY CALLOUT
+// ═══════════════════════════════════════════════════════════
+
+.equity-callout {
+  background: linear-gradient(135deg, rgba($ocean-teal, 0.06), rgba($forest-light, 0.04));
+  border-left: 4px solid $ocean-teal;
+  border-radius: 0 6px 6px 0;
+  padding: 1.5rem 1.8rem;
+  margin: 1.5rem 0;
+  
+  .callout-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $ocean-teal;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: $lava-mid;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// CLOSING / CONTACT SECTION
+// ═══════════════════════════════════════════════════════════
+
+.closing-section {
+  background: $sand-warm;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-top: 2.5rem;
+  border: 1px solid $sand-mid;
+  
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    
+    a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $ocean-teal;
+      text-decoration: none;
+      
+      &:hover {
+        color: darken($ocean-teal, 12%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// CODE BLOCKS
+// ═══════════════════════════════════════════════════════════
+
+code {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 0.85em;
+}
+
+pre.sourceCode {
+  background: $lava-dark !important;
+  border-radius: 4px;
+  border: none;
+  padding: 1.2rem !important;
+}
+
+.code-fold-btn-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+details summary {
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  color: $forest-mid;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  
+  &:hover {
+    color: $ocean-teal;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// TABLE OF CONTENTS REFINEMENTS
+// ═══════════════════════════════════════════════════════════
+
+.sidebar nav[role="doc-toc"] {
+  padding-top: 1rem;
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.82rem;
+    color: $lava-soft;
+    text-decoration: none;
+    padding: 0.25rem 0.8rem;
+    display: block;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+    
+    &:hover {
+      color: $forest-mid;
+      border-left-color: $sunset-warm;
+    }
+    
+    &.active {
+      color: $forest-deep;
+      font-weight: 600;
+      border-left-color: $sunset-warm;
+    }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// RESPONSIVE
+// ═══════════════════════════════════════════════════════════
+
+@media (max-width: 768px) {
+  .hero-banner {
+    padding: 2rem 1.5rem;
+    
+    h1 { font-size: 2rem; }
+  }
+  
+  .impact-banner .impact-number {
+    font-size: 2.2rem;
+  }
+  
+  .closing-section .contact-row {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// SECTION DIVIDER — subtle leaf motif via CSS
+// ═══════════════════════════════════════════════════════════
+
+.section-divider {
+  text-align: center;
+  margin: 2.5rem 0;
+  color: $sand-mid;
+  font-size: 1.5rem;
+  letter-spacing: 0.8em;
+  
+  &::before {
+    content: "· · ·";
+  }
+}

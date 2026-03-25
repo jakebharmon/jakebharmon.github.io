@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Jake Harmon | Kahuina Consulting"
+  
+format:
+  html:
+    theme: 
+      - cosmo
+      - styles.scss
+    toc: true
+    toc-location: left
+    toc-title: "Navigation"
+    toc-depth: 2
+    smooth-scroll: true
+    code-fold: true
+    code-summary: "View R Code"
+    code-tools: true
+    self-contained: false
+    page-layout: article
+    grid:
+      sidebar-width: 220px
+      body-width: 900px
+      margin-width: 200px
+    link-external-newwindow: true

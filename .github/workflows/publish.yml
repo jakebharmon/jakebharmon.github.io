@@ -24,14 +24,21 @@ jobs:
 
       - name: Install R Dependencies
         run: |
-          install.packages(c('rmarkdown', 'knitr', 'jsonlite'))
+          install.packages(c('rmarkdown', 'knitr', 'jsonlite', 'reactable', 'htmltools'))
         shell: Rscript {0}
 
-      # Step 1: Just render the site (creates the _site folder)
+      # Step 1: Render the main site
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
 
-      # Step 2: Force deployment to gh-pages branch
+      # Step 2: Render the aloha-kahuina sub-project and merge into _site
+      - name: Render Aloha Kahuina
+        run: |
+          quarto render aloha-kahuina/
+          mkdir -p _site/aloha-kahuina
+          cp -r aloha-kahuina/docs/. _site/aloha-kahuina/
+
+      # Step 3: Force deployment to gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

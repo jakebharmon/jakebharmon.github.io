@@ -1,0 +1,413 @@
+---
+title: "Jake Harmon"
+subtitle: "A Cover Letter for Kahuina Consulting"
+author: ""
+date: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+::: {.hero-banner}
+
+# Jake Harmon
+
+::: {.hero-subtitle}
+Public Health Associate — Application to Kahuina Consulting
+:::
+
+::: {.hero-tagline}
+"Kahuina is Hawaiian for bringing people together."
+I've spent my career learning that the best public health happens at the places where people, data, and systems converge.
+:::
+
+:::
+
+## The Journey {#the-journey}
+
+::: {.section-label}
+Introduction
+:::
+
+::: {.lead-text}
+Before I ever opened a dataset, I learned epidemiology from the back of an ambulance.
+:::
+
+As an EMT with DeKalb County Fire Rescue, I responded to 911 calls across one of metro Atlanta's most diverse counties. The clinical work was intense — patient assessments, chief complaints, care reports filed under protocol. But the patterns I noticed had nothing to do with any single call. They were systemic.
+
+I started recognizing faces. The same individuals calling 911 week after week — not because of emergencies, but because the emergency system was the only door that stayed open for them. I helped form a **community paramedicine program** that documented these frequent, non-emergency callers so we could connect them with the alternative support they actually needed: primary care, social services, stable housing.
+
+Then there were the opioid calls. I carried naloxone and used it. But I also carried information — drug treatment resources, rehab program contacts — because I learned quickly that the window between resuscitation and discharge was sometimes the only moment a person would accept help. That work taught me something I carry into every project today: **data is only as valuable as the human connection that delivers it.**
+
+That realization is what pulled me from emergency response into public health. I wanted to work upstream — not just on the patients arriving by ambulance, but on the systems, the surveillance, and the infrastructure that determine whether communities thrive or fall through the cracks.
+
+::: {.section-divider}
+:::
+
+## The Work {#the-work}
+
+::: {.section-label}
+Technical Portfolio
+:::
+
+I build tools that help public health agencies make better decisions with their data. Below are three projects that represent how I think about the intersection of epidemiology, data science, and public health practice.
+
+::: {.project-grid}
+
+::: {.project-card}
+::: {.card-category}
+Data Privacy & Governance
+:::
+
+### K-Anonymity Simulation for CSTE
+
+I wrote this simulation for CSTE's LEARN course (Course 3.1: Data Privacy) to demonstrate the distorting effect of k-anonymity as a de-identification technique. The project creates four progressive scenarios showing the delicate balance between making data publicly available and upholding HIPAA protections — with 3D Plotly visualizations that make the tradeoffs tangible.
+
+::: {.card-tech}
+[R]{.tech-tag} [Plotly]{.tech-tag} [Simulation]{.tech-tag} [HIPAA]{.tech-tag}
+:::
+
+[View on GitHub](https://github.com/jakebharmon/k_anon_simulation){.card-link}
+
+:::
+
+::: {.project-card}
+::: {.card-category}
+Infectious Disease Modeling
+:::
+
+### Infectious Disease Modeling Paper
+
+Coursework under Dr. Gerardo Chowell at Georgia State University, this Quarto manuscript applies compartmental modeling and Bayesian methods (Stan) to infectious disease dynamics. Built as a fully reproducible research document — the kind of transparent, version-controlled analytical workflow that modern public health demands.
+
+::: {.card-tech}
+[R]{.tech-tag} [Quarto]{.tech-tag} [Stan]{.tech-tag} [Bayesian]{.tech-tag} [renv]{.tech-tag}
+:::
+
+[View on GitHub](https://github.com/jakebharmon/PH8280_id_modeling){.card-link}
+
+:::
+
+::: {.project-card}
+::: {.card-category}
+Health Equity & Geospatial Analysis
+:::
+
+### Vaccines for Children Provider Map
+
+Built with the Southern Alliance for Public Health Leadership, this interactive Leaflet map examines the relationship between Vaccines for Children (VFC) provider locations and eligible child populations across Georgia and South Carolina. By layering ACS child poverty data by ZCTA against VFC provider proximity, the map reveals where high-need communities have the least access to free childhood immunizations.
+
+::: {.card-tech}
+[R]{.tech-tag} [Leaflet]{.tech-tag} [ACS/Census]{.tech-tag} [Geospatial]{.tech-tag}
+:::
+
+[View Live Map (Georgia)](https://jakebharmon.github.io/saphl_vfc/ga_map.html){.card-link}
+
+:::
+
+:::
+
+```{r project-summary-table, echo=TRUE}
+#| code-fold: true
+#| code-summary: "R Code: Project Summary Table"
+
+library(reactable)
+library(htmltools)
+
+projects <- data.frame(
+  Project = c(
+    "K-Anonymity Simulation",
+    "ID Modeling Manuscript",
+    "VFC Provider Map"
+  ),
+  Domain = c(
+    "Data Privacy",
+    "Infectious Disease",
+    "Immunization Access"
+  ),
+  Tools = c(
+    "R, Plotly, Simulation",
+    "R, Quarto, Stan, renv",
+    "R, Leaflet, ACS Data"
+  ),
+  Audience = c(
+    "CSTE LEARN course participants",
+    "Academic (GSU)",
+    "SAPHL partners, state agencies"
+  ),
+  Link = c(
+    "https://github.com/jakebharmon/k_anon_simulation",
+    "https://github.com/jakebharmon/PH8280_id_modeling",
+    "https://jakebharmon.github.io/saphl_vfc/ga_map.html"
+  )
+)
+
+reactable(
+  projects,
+  searchable = FALSE,
+  striped = TRUE,
+  highlight = TRUE,
+  compact = TRUE,
+  columns = list(
+    Project = colDef(
+      name = "Project",
+      minWidth = 160
+    ),
+    Domain = colDef(
+      name = "Domain",
+      minWidth = 120
+    ),
+    Tools = colDef(
+      name = "Tech Stack",
+      minWidth = 150
+    ),
+    Audience = colDef(
+      name = "Audience",
+      minWidth = 160
+    ),
+    Link = colDef(
+      name = "",
+      minWidth = 60,
+      cell = function(value) {
+        htmltools::tags$a(
+          href = value,
+          target = "_blank",
+          style = "color: #2A7B6F; font-weight: 500; text-decoration: none;",
+          "View →"
+        )
+      }
+    )
+  ),
+  theme = reactableTheme(
+    borderColor = "#E8DFD2",
+    headerStyle = list(
+      background = "#1B3A1F",
+      color = "#FAF7F2",
+      fontWeight = 600,
+      fontSize = "0.78rem",
+      textTransform = "uppercase",
+      letterSpacing = "0.06em",
+      borderBottom = "2px solid #D4763A"
+    ),
+    cellStyle = list(
+      fontFamily = '"DM Sans", sans-serif',
+      fontSize = "0.88rem"
+    )
+  )
+)
+```
+
+::: {.impact-banner}
+
+::: {.impact-number}
+100+
+:::
+
+::: {.impact-label}
+Person-hours saved per cycle through automated R & Quarto reporting at CSTE — establishing reproducible, error-free workflows for data dissemination across state health departments.
+:::
+
+:::
+
+At CSTE, I help states make data-driven decisions about their own data infrastructure. I've led survey design and mixed-methods analysis for projects that ask hard questions: What would jurisdictions do if they gained — or lost — data modernization funding? How do states compare the costs of surveillance platform subscriptions? By building automated Quarto reports that replace manual dissemination, I've freed over a hundred person-hours for the people who need that time most — state and territorial epidemiologists doing the actual work.
+
+::: {.section-divider}
+:::
+
+## The Ecosystem {#the-ecosystem}
+
+::: {.section-label}
+Stakeholder Collaboration
+:::
+
+Public health doesn't happen in silos. Every project I've worked on has required navigating relationships across levels of government, academic institutions, and community organizations. The table below represents the ecosystem I've collaborated within — from federal agencies to the local fire station.
+
+```{r stakeholder-table, echo=TRUE}
+#| code-fold: true
+#| code-summary: "R Code: Stakeholder Ecosystem Table"
+
+library(reactable)
+library(htmltools)
+
+stakeholders <- data.frame(
+  Tier = c(
+    "Federal", "Federal",
+    "State", "State", "State",
+    "Local",
+    "Community/NGO", "Community/NGO", "Community/NGO", "Community/NGO"
+  ),
+  Organization = c(
+    "CDC NCIRD",
+    "CDC CNEIZD",
+    "Georgia DPH",
+    "Georgia EPD",
+    "Georgia Emerging Infections Program",
+    "DeKalb County Fire Rescue",
+    "CSTE",
+    "CHARRS",
+    "Emory Oaks",
+    "Southern Alliance for Public Health Leadership"
+  ),
+  Context = c(
+    "Survey collaboration and data dissemination through CSTE partnership",
+    "Survey collaboration and data dissemination through CSTE partnership",
+    "Case interviewing (English/Spanish), disease surveillance via SENDSS",
+    "Multi-year air pollution trend analysis with university partners",
+    "Epidemiologic investigation support through CSTE coordination",
+    "EMT response, community paramedicine program, opioid call support",
+    "Workforce intern — automated reporting, survey design, data modernization costing",
+    "Environmental health initiatives in West Atlanta",
+    "Autism support programming at Emory University",
+    "VFC provider mapping and childhood immunization access analysis"
+  ),
+  stringsAsFactors = FALSE
+)
+
+# Tier badge rendering function
+tier_badge <- function(value) {
+  css_class <- switch(value,
+    "Federal"       = "federal",
+    "State"         = "state",
+    "Local"         = "local",
+    "Community/NGO" = "community"
+  )
+  htmltools::span(class = paste("tier-badge", css_class), value)
+}
+
+reactable(
+  stakeholders,
+  searchable = TRUE,
+  striped = TRUE,
+  highlight = TRUE,
+  defaultPageSize = 10,
+  columns = list(
+    Tier = colDef(
+      name = "Tier",
+      minWidth = 110,
+      cell = function(value) tier_badge(value),
+      filterInput = function(values, name) {
+        htmltools::tags$select(
+          onchange = sprintf("Reactable.setFilter('stakeholder-tbl', '%s', event.target.value || undefined)", name),
+          htmltools::tags$option(value = "", "All Tiers"),
+          lapply(unique(values), function(v) htmltools::tags$option(value = v, v))
+        )
+      }
+    ),
+    Organization = colDef(
+      name = "Organization",
+      minWidth = 200
+    ),
+    Context = colDef(
+      name = "Project Context",
+      minWidth = 300
+    )
+  ),
+  theme = reactableTheme(
+    borderColor = "#E8DFD2",
+    searchInputStyle = list(
+      border = "1px solid #E8DFD2",
+      borderRadius = "4px",
+      padding = "6px 12px",
+      fontFamily = '"DM Sans", sans-serif',
+      fontSize = "0.88rem",
+      width = "100%",
+      maxWidth = "320px"
+    ),
+    headerStyle = list(
+      background = "#1B3A1F",
+      color = "#FAF7F2",
+      fontWeight = 600,
+      fontSize = "0.78rem",
+      textTransform = "uppercase",
+      letterSpacing = "0.06em",
+      borderBottom = "2px solid #D4763A"
+    ),
+    cellStyle = list(
+      fontFamily = '"DM Sans", sans-serif',
+      fontSize = "0.88rem"
+    )
+  ),
+  elementId = "stakeholder-tbl"
+)
+```
+
+::: {.section-divider}
+:::
+
+## Health Equity in Practice {#health-equity}
+
+::: {.section-label}
+Centering Communities
+:::
+
+### Bilingual Case Interviewing
+
+At the Georgia Department of Public Health, I conduct disease case interviews in both English and Spanish, entering data into the State Electronic Notifiable Disease Surveillance System (SENDSS). This isn't just a language skill on a resume — it's the difference between a completed investigation and a missed case. For Spanish-speaking communities navigating a disease investigation, having an interviewer who can communicate directly reduces barriers, builds trust, and produces higher-quality surveillance data. Public health data is only as complete as the communities it reaches.
+
+::: {.equity-callout}
+
+::: {.callout-label}
+Health Equity Lens
+:::
+
+Every tool I build, every report I automate, and every interview I conduct is shaped by a simple question: **who is this serving, and who might it be leaving out?** From mapping VFC deserts in rural Georgia to supporting opioid response in DeKalb County, I approach public health practice through an asset-based framework — identifying what communities have, not just what they lack.
+
+:::
+
+### Cross-Cultural Collaboration
+
+::: {.photo-placeholder}
+
+::: {.placeholder-icon}
+📷
+:::
+
+Photo: Jake with Pacific Island epidemiologists at the CSTE Annual Conference
+
+::: {.placeholder-caption}
+Replace this block with your conference photo — update the `<img>` tag in the source file.
+:::
+
+:::
+
+Working at CSTE has given me the privilege of collaborating with epidemiologists and public health professionals from across U.S. states and territories — including colleagues from Pacific Island jurisdictions who bring irreplaceable perspective on surveillance capacity, data sovereignty, and health systems that serve geographically dispersed populations. These conversations have shaped how I think about data modernization: not as a one-size-fits-all technology upgrade, but as an adaptive process that must honor local context.
+
+::: {.section-divider}
+:::
+
+## Why Kahuina {#why-kahuina}
+
+::: {.section-label}
+Closing
+:::
+
+I'm applying to Kahuina because your work sits at the exact intersection where I've built my career — **data modernization, surveillance practice, and the human relationships that make systems change possible.**
+
+My experience maps directly to your portfolio. I've responded firsthand to opioid overdose calls and helped build the community paramedicine infrastructure that connects those moments to longer-term support — that's your **overdose surveillance** work, grounded in field experience. At CSTE, I've designed and analyzed the surveys that help states understand what they'd do with — or without — data modernization dollars, and I've built the costing tools that let jurisdictions compare platform subscriptions and share market intelligence — that's your **data modernization and public health data exchange** practice, from the inside.
+
+And the through-line across all of it is collaboration. Federal agencies, state departments, local fire stations, community organizations, university partners — I've learned to navigate every level of the public health ecosystem because that's where the work actually lives. Not in any single office, but in the space between them.
+
+Kahuina means bringing people together. That's what I do.
+
+::: {.closing-section}
+
+**Jake Harmon** · Atlanta, GA
+
+::: {.contact-row}
+
+[jakebluesharmon@gmail.com](mailto:jakebluesharmon@gmail.com)
+
+[linkedin.com/in/jake-harmon-blues](https://linkedin.com/in/jake-harmon-blues)
+
+[github.com/jakebharmon](https://github.com/jakebharmon)
+
+[(678) 948-5253]{style="color: #3D3D3D;"}
+
+:::
+
+:::
