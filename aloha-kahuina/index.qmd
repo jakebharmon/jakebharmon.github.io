@@ -1,6 +1,6 @@
 ---
 title: "Jake Harmon"
-subtitle: "A Cover Letter for Kahuina Consulting"
+subtitle: "Cover Letter for Kahuina Consulting - Public Health Associate Position"
 author: ""
 date: ""
 ---
@@ -15,380 +15,142 @@ knitr::opts_chunk$set(
 
 ::: {.hero-banner}
 
-# Jake Harmon
-
-::: {.hero-subtitle}
-Public Health Associate — Application to Kahuina Consulting
-:::
-
-::: {.hero-tagline}
-"Kahuina is Hawaiian for bringing people together."
-I've spent my career learning that the best public health happens at the places where people, data, and systems converge.
-:::
+# Aloha, Kahuina
 
 :::
 
 ## The Journey {#the-journey}
 
-::: {.section-label}
-Introduction
-:::
+My journey into public health started as an EMT. When our fire department launched a Community Paramedicine program (designed to divert frequent, non-emergency callers from costly hospital trips) a colleague with her new MPH asked me to help evaluate it. While my sociology background was the initial hook, what really captured me was the data underneath. That experience showed me the power of systems thinking in public health, and it pushed me back to school to study epidemiology.
 
-::: {.lead-text}
-Before I ever opened a dataset, I learned epidemiology from the back of an ambulance.
-:::
-
-As an EMT with DeKalb County Fire Rescue, I responded to 911 calls across one of metro Atlanta's most diverse counties. The clinical work was intense — patient assessments, chief complaints, care reports filed under protocol. But the patterns I noticed had nothing to do with any single call. They were systemic.
-
-I started recognizing faces. The same individuals calling 911 week after week — not because of emergencies, but because the emergency system was the only door that stayed open for them. I helped form a **community paramedicine program** that documented these frequent, non-emergency callers so we could connect them with the alternative support they actually needed: primary care, social services, stable housing.
-
-Then there were the opioid calls. I carried naloxone and used it. But I also carried information — drug treatment resources, rehab program contacts — because I learned quickly that the window between resuscitation and discharge was sometimes the only moment a person would accept help. That work taught me something I carry into every project today: **data is only as valuable as the human connection that delivers it.**
-
-That realization is what pulled me from emergency response into public health. I wanted to work upstream — not just on the patients arriving by ambulance, but on the systems, the surveillance, and the infrastructure that determine whether communities thrive or fall through the cracks.
-
-::: {.section-divider}
-:::
-
-## The Work {#the-work}
-
-::: {.section-label}
-Technical Portfolio
-:::
-
-I build tools that help public health agencies make better decisions with their data. Below are three projects that represent how I think about the intersection of epidemiology, data science, and public health practice.
-
-::: {.project-grid}
-
-::: {.project-card}
-::: {.card-category}
-Data Privacy & Governance
-:::
-
-### K-Anonymity Simulation for CSTE
-
-I wrote this simulation for CSTE's LEARN course (Course 3.1: Data Privacy) to demonstrate the distorting effect of k-anonymity as a de-identification technique. The project creates four progressive scenarios showing the delicate balance between making data publicly available and upholding HIPAA protections — with 3D Plotly visualizations that make the tradeoffs tangible.
-
-::: {.card-tech}
-[R]{.tech-tag} [Plotly]{.tech-tag} [Simulation]{.tech-tag} [HIPAA]{.tech-tag}
-:::
-
-[View on GitHub](https://github.com/jakebharmon/k_anon_simulation){.card-link}
-
-:::
-
-::: {.project-card}
-::: {.card-category}
-Infectious Disease Modeling
-:::
-
-### Infectious Disease Modeling Paper
-
-Coursework under Dr. Gerardo Chowell at Georgia State University, this Quarto manuscript applies compartmental modeling and Bayesian methods (Stan) to infectious disease dynamics. Built as a fully reproducible research document — the kind of transparent, version-controlled analytical workflow that modern public health demands.
-
-::: {.card-tech}
-[R]{.tech-tag} [Quarto]{.tech-tag} [Stan]{.tech-tag} [Bayesian]{.tech-tag} [renv]{.tech-tag}
-:::
-
-[View on GitHub](https://github.com/jakebharmon/PH8280_id_modeling){.card-link}
-
-:::
-
-::: {.project-card}
-::: {.card-category}
-Health Equity & Geospatial Analysis
-:::
-
-### Vaccines for Children Provider Map
-
-Built with the Southern Alliance for Public Health Leadership, this interactive Leaflet map examines the relationship between Vaccines for Children (VFC) provider locations and eligible child populations across Georgia and South Carolina. By layering ACS child poverty data by ZCTA against VFC provider proximity, the map reveals where high-need communities have the least access to free childhood immunizations.
-
-::: {.card-tech}
-[R]{.tech-tag} [Leaflet]{.tech-tag} [ACS/Census]{.tech-tag} [Geospatial]{.tech-tag}
-:::
-
-[View Live Map (Georgia)](https://jakebharmon.github.io/saphl_vfc/ga_map.html){.card-link}
-
-:::
-
-:::
-
-```{r project-summary-table, echo=TRUE}
-#| code-fold: true
-#| code-summary: "R Code: Project Summary Table"
-
-library(reactable)
-library(htmltools)
-
-projects <- data.frame(
-  Project = c(
-    "K-Anonymity Simulation",
-    "ID Modeling Manuscript",
-    "VFC Provider Map"
-  ),
-  Domain = c(
-    "Data Privacy",
-    "Infectious Disease",
-    "Immunization Access"
-  ),
-  Tools = c(
-    "R, Plotly, Simulation",
-    "R, Quarto, Stan, renv",
-    "R, Leaflet, ACS Data"
-  ),
-  Audience = c(
-    "CSTE LEARN course participants",
-    "Academic (GSU)",
-    "SAPHL partners, state agencies"
-  ),
-  Link = c(
-    "https://github.com/jakebharmon/k_anon_simulation",
-    "https://github.com/jakebharmon/PH8280_id_modeling",
-    "https://jakebharmon.github.io/saphl_vfc/ga_map.html"
-  )
-)
-
-reactable(
-  projects,
-  searchable = FALSE,
-  striped = TRUE,
-  highlight = TRUE,
-  compact = TRUE,
-  columns = list(
-    Project = colDef(
-      name = "Project",
-      minWidth = 160
-    ),
-    Domain = colDef(
-      name = "Domain",
-      minWidth = 120
-    ),
-    Tools = colDef(
-      name = "Tech Stack",
-      minWidth = 150
-    ),
-    Audience = colDef(
-      name = "Audience",
-      minWidth = 160
-    ),
-    Link = colDef(
-      name = "",
-      minWidth = 60,
-      cell = function(value) {
-        htmltools::tags$a(
-          href = value,
-          target = "_blank",
-          style = "color: #2A7B6F; font-weight: 500; text-decoration: none;",
-          "View →"
-        )
-      }
-    )
-  ),
-  theme = reactableTheme(
-    borderColor = "#E8DFD2",
-    headerStyle = list(
-      background = "#1B3A1F",
-      color = "#FAF7F2",
-      fontWeight = 600,
-      fontSize = "0.78rem",
-      textTransform = "uppercase",
-      letterSpacing = "0.06em",
-      borderBottom = "2px solid #D4763A"
-    ),
-    cellStyle = list(
-      fontFamily = '"DM Sans", sans-serif',
-      fontSize = "0.88rem"
-    )
-  )
-)
-```
-
-::: {.impact-banner}
-
-::: {.impact-number}
-100+
-:::
-
-::: {.impact-label}
-Person-hours saved per cycle through automated R & Quarto reporting at CSTE — establishing reproducible, error-free workflows for data dissemination across state health departments.
-:::
-
-:::
-
-At CSTE, I help states make data-driven decisions about their own data infrastructure. I've led survey design and mixed-methods analysis for projects that ask hard questions: What would jurisdictions do if they gained — or lost — data modernization funding? How do states compare the costs of surveillance platform subscriptions? By building automated Quarto reports that replace manual dissemination, I've freed over a hundred person-hours for the people who need that time most — state and territorial epidemiologists doing the actual work.
-
-::: {.section-divider}
-:::
-
-## The Ecosystem {#the-ecosystem}
+The past two years have been a tremendous learning experience. I've had the chance to work with a scintillating mosaic of public health stakeholders on high impact projects:
 
 ::: {.section-label}
 Stakeholder Collaboration
 :::
 
-Public health doesn't happen in silos. Every project I've worked on has required navigating relationships across levels of government, academic institutions, and community organizations. The table below represents the ecosystem I've collaborated within — from federal agencies to the local fire station.
+::: {.panel-tabset}
 
-```{r stakeholder-table, echo=TRUE}
-#| code-fold: true
-#| code-summary: "R Code: Stakeholder Ecosystem Table"
+## Federal
 
-library(reactable)
-library(htmltools)
+- **CDC NCIRD** — Survey collaboration and data dissemination with state and local health departments through CSTE partnership
+- **CDC CNEIZD** — Reviewing conditions for clean, regular data flows on enteric disease
 
-stakeholders <- data.frame(
-  Tier = c(
-    "Federal", "Federal",
-    "State", "State", "State",
-    "Local",
-    "Community/NGO", "Community/NGO", "Community/NGO", "Community/NGO"
-  ),
-  Organization = c(
-    "CDC NCIRD",
-    "CDC CNEIZD",
-    "Georgia DPH",
-    "Georgia EPD",
-    "Georgia Emerging Infections Program",
-    "DeKalb County Fire Rescue",
-    "CSTE",
-    "CHARRS",
-    "Emory Oaks",
-    "Southern Alliance for Public Health Leadership"
-  ),
-  Context = c(
-    "Survey collaboration and data dissemination through CSTE partnership",
-    "Survey collaboration and data dissemination through CSTE partnership",
-    "Case interviewing (English/Spanish), disease surveillance via SENDSS",
-    "Multi-year air pollution trend analysis with university partners",
-    "Epidemiologic investigation support through CSTE coordination",
-    "EMT response, community paramedicine program, opioid call support",
-    "Workforce intern — automated reporting, survey design, data modernization costing",
-    "Environmental health initiatives in West Atlanta",
-    "Autism support programming at Emory University",
-    "VFC provider mapping and childhood immunization access analysis"
-  ),
-  stringsAsFactors = FALSE
-)
+## State
 
-# Tier badge rendering function
-tier_badge <- function(value) {
-  css_class <- switch(value,
-    "Federal"       = "federal",
-    "State"         = "state",
-    "Local"         = "local",
-    "Community/NGO" = "community"
-  )
-  htmltools::span(class = paste("tier-badge", css_class), value)
-}
+- **Georgia Department of Public Health** — Case interviewing (English/Spanish), disease surveillance via SENDSS
+- **Georgia Environmental Protection Division** — Multi-year air pollution trend analysis with university partners
+- **Georgia Emerging Infections Program** — Automating data cleaning for lab results on notifiable diseases with DPH
 
-reactable(
-  stakeholders,
-  searchable = TRUE,
-  striped = TRUE,
-  highlight = TRUE,
-  defaultPageSize = 10,
-  columns = list(
-    Tier = colDef(
-      name = "Tier",
-      minWidth = 110,
-      cell = function(value) tier_badge(value),
-      filterInput = function(values, name) {
-        htmltools::tags$select(
-          onchange = sprintf("Reactable.setFilter('stakeholder-tbl', '%s', event.target.value || undefined)", name),
-          htmltools::tags$option(value = "", "All Tiers"),
-          lapply(unique(values), function(v) htmltools::tags$option(value = v, v))
-        )
-      }
-    ),
-    Organization = colDef(
-      name = "Organization",
-      minWidth = 200
-    ),
-    Context = colDef(
-      name = "Project Context",
-      minWidth = 300
-    )
-  ),
-  theme = reactableTheme(
-    borderColor = "#E8DFD2",
-    searchInputStyle = list(
-      border = "1px solid #E8DFD2",
-      borderRadius = "4px",
-      padding = "6px 12px",
-      fontFamily = '"DM Sans", sans-serif',
-      fontSize = "0.88rem",
-      width = "100%",
-      maxWidth = "320px"
-    ),
-    headerStyle = list(
-      background = "#1B3A1F",
-      color = "#FAF7F2",
-      fontWeight = 600,
-      fontSize = "0.78rem",
-      textTransform = "uppercase",
-      letterSpacing = "0.06em",
-      borderBottom = "2px solid #D4763A"
-    ),
-    cellStyle = list(
-      fontFamily = '"DM Sans", sans-serif',
-      fontSize = "0.88rem"
-    )
-  ),
-  elementId = "stakeholder-tbl"
-)
-```
+## Local
 
-::: {.section-divider}
-:::
+- **DeKalb County Fire Rescue** — EMT response, community paramedicine program, opioid call support
 
-## Health Equity in Practice {#health-equity}
+## Community / NGO
 
-::: {.section-label}
-Centering Communities
-:::
+- **Council of State and Territorial Epidemiologists** — Workforce development, data modernization research, cost-effictiveness of federal dollars
+- **Community Health Aligning Revitalization Reselience & Sustainability** — Environmental health initiatives in West Atlanta
+- **Emory Oaks** — Autism support programming at Emory University
+- **Southern Alliance for Public Health Leadership** — VFC provider mapping and childhood immunization access analysis
 
-### Bilingual Case Interviewing
+## Academic
 
-At the Georgia Department of Public Health, I conduct disease case interviews in both English and Spanish, entering data into the State Electronic Notifiable Disease Surveillance System (SENDSS). This isn't just a language skill on a resume — it's the difference between a completed investigation and a missed case. For Spanish-speaking communities navigating a disease investigation, having an interviewer who can communicate directly reduces barriers, builds trust, and produces higher-quality surveillance data. Public health data is only as complete as the communities it reaches.
-
-::: {.equity-callout}
-
-::: {.callout-label}
-Health Equity Lens
-:::
-
-Every tool I build, every report I automate, and every interview I conduct is shaped by a simple question: **who is this serving, and who might it be leaving out?** From mapping VFC deserts in rural Georgia to supporting opioid response in DeKalb County, I approach public health practice through an asset-based framework — identifying what communities have, not just what they lack.
+- **Emory University** — Data sharing agreement with CHARRS to support air pollution research in West Atlanta
+- **University of Georgia** — Data sharing agreement with CHARRS for cross-institutional air pollution analysis
+- **Johns Hopkins University** — Facilitated the "R for Trend Analysis" workshop at CSTE's 2025 Annual Conference
 
 :::
 
-### Cross-Cultural Collaboration
+In the spirit of "Ka Huina", one of my most impactful partnerships was a project evaluating the state of the epidemiology workforce in the Pacific Territories and Freely Associated States. I spent a month conducting late-night, eastern time zone focus groups with Public Heath representatives from the Pacific to learn how CSTE could better support their activities, so, when I got to meet some of them in person at our 2025 Conference, it felt like seeing old friends.
 
 ::: {.conference-photo}
 
 ![Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference](images/cste_pacific_island.jpg){fig-alt="Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference" style="width:100%; border-radius:6px;"}
 
-::: {.photo-caption}
-With Pacific Island epidemiologists at the CSTE Annual Conference
 :::
 
-:::
+## The Work {#the-work}
 
-Working at CSTE has given me the privilege of collaborating with epidemiologists and public health professionals from across U.S. states and territories — including colleagues from Pacific Island jurisdictions who bring irreplaceable perspective on surveillance capacity, data sovereignty, and health systems that serve geographically dispersed populations. These conversations have shaped how I think about data modernization: not as a one-size-fits-all technology upgrade, but as an adaptive process that must honor local context.
+Being a data-oriented person, I harness digital technologies to facilitate communication and teamwork. At CSTE, I created our organizations first-ever GitHub repository to improve collaborative analysis and to preserve our code for the future. Because many of my CSTE projects include sensitive data, however, I wanted to share some examples of other public-facing, communication projects I've created in order to give the team not just a sense of my breadth of experience, but to excite you with new ideas of how we could potentially engage our partners.
 
-::: {.section-divider}
-:::
+```{=html}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+<div id="project-carousel" class="splide" aria-label="Project Portfolio">
+  <div class="splide__track">
+    <ul class="splide__list">
+
+      <li class="splide__slide">
+        <div class="project-card">
+          <div class="card-category">Data Privacy &amp; Governance</div>
+          <h3>K-Anonymity Simulation</h3>
+          <p>The project creates four progressive scenarios showing the delicate balance between making data publicly available and upholding HIPAA protections — with 3D Plotly visualizations that make the tradeoffs tangible.</p>
+          <a href="https://github.com/jakebharmon/k_anon_simulation" class="card-link" target="_blank">View on GitHub</a>
+          <a href="https://www.youtube.com/watch?v=LonP1WvUlok" class="card-link" target="_blank">Watch Example Video</a>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="project-card">
+          <div class="card-category">Infectious Disease Modeling</div>
+          <h3>Influenza A-B Modeling Paper</h3>
+          <p>Coursework under Dr. Chowell at GSU, this document examines a two-strain influenza model using Bayesian statistics. Built as a fully reproducible research document — the kind of transparent workflow that builds trust and insight.</p>
+          <a href="https://github.com/jakebharmon/PH8280_id_modeling/blob/main/manuscript/bayes_flu_manuscript.qmd" class="card-link" target="_blank">View QMD Source</a>
+          <a href="https://github.com/jakebharmon/PH8280_id_modeling/raw/refs/heads/main/manuscript/bayes_flu_manuscript.docx" class="card-link" target="_blank">Download Manuscript (.docx)</a>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="project-card">
+          <div class="card-category">Geospatial Analysis</div>
+          <h3>Vaccines for Children Map</h3>
+          <p>Built with the Southern Alliance for Public Health Leadership, this interactive Leaflet map examines the relationship between Vaccines for Children (VFC) provider locations and eligible child populations across Georgia and South Carolina.</p>
+          <a href="https://jakebharmon.github.io/saphl_vfc/ga_map.html" class="card-link" target="_blank">View Live Map (Georgia)</a>
+        </div>
+      </li>
+
+      <li class="splide__slide">
+        <div class="project-card">
+          <div class="card-category">Survival Analysis</div>
+          <h3>Contagious Canticles</h3>
+          <p>Using epidemiological methods to analyze Sacred Harp minutes data and understand how certain songs "catch on" and persist through singing communities.</p>
+          <a href="https://51t3yt-jake-harmon.shinyapps.io/sacred_harp_km_app/" class="card-link" target="_blank">View Live App</a>
+          <a href="https://github.com/jakebharmon/contagious_canticles" class="card-link" target="_blank">View on GitHub</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#project-carousel', {
+      type      : 'slide',
+      perPage   : 2,
+      perMove   : 1,
+      gap       : '1.5rem',
+      arrows    : true,
+      pagination: true,
+      autoplay  : false,
+      rewind    : true,
+    }).mount();
+  });
+</script>
+```
 
 ## Why Kahuina {#why-kahuina}
 
-::: {.section-label}
-Closing
-:::
+I love the pace and variety of Kahuina's portfolio — pressing public health matters, work across different partners across different levels and sectors - and I've seen firsthand at CSTE how this kind of agility drives real innovation. From my research on how health departments are modernizing their data flows, I understand the future of epidemiology and informatics to be the same thing. I'm genuinely excited about the emerging technologies such as syndromic surveillance and wastewater surveillance, and I want to be part of forging this new horizon of public health.
 
-I'm applying to Kahuina because your work sits at the exact intersection where I've built my career — **data modernization, surveillance practice, and the human relationships that make systems change possible.**
+## Why Jake Harmon {#why-jake-harmon}
 
-My experience maps directly to your portfolio. I've responded firsthand to opioid overdose calls and helped build the community paramedicine infrastructure that connects those moments to longer-term support — that's your **overdose surveillance** work, grounded in field experience. At CSTE, I've designed and analyzed the surveys that help states understand what they'd do with — or without — data modernization dollars, and I've built the costing tools that let jurisdictions compare platform subscriptions and share market intelligence — that's your **data modernization and public health data exchange** practice, from the inside.
+But beyond the work itself, what matters is how you do it. I've learned that collaboration isn't just a nice-to-have, but rather how you build something that works. And I've learned that the difference between a "good solution" and a solution a partner will *actually use* often comes down to details. At CSTE, I composed parameterized reports housed in a GitHub repository because the partners needed version control and remote access. At DPH, I produced the same sort of reports as local, desktop-runnable files because we needed off-line, easily workable solutions. Same skill set, different execution. That's what I bring: the attentiveness to understand what a partner actually needs, and the flexibility to deliver it right.
 
-And the through-line across all of it is collaboration. Federal agencies, state departments, local fire stations, community organizations, university partners — I've learned to navigate every level of the public health ecosystem because that's where the work actually lives. Not in any single office, but in the space between them.
+Aloha,
 
-Kahuina means bringing people together. That's what I do.
+Jake
 
 ::: {.closing-section}
 
@@ -401,8 +163,6 @@ Kahuina means bringing people together. That's what I do.
 [linkedin.com/in/jake-harmon-blues](https://linkedin.com/in/jake-harmon-blues)
 
 [github.com/jakebharmon](https://github.com/jakebharmon)
-
-[(678) 948-5253]{style="color: #3D3D3D;"}
 
 :::
 

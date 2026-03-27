@@ -192,11 +192,48 @@ blockquote {
 // PROJECT CARDS
 // ═══════════════════════════════════════════════════════════
 
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin: 1.5rem 0;
+// Splide carousel overrides
+#project-carousel {
+  margin: 1.5rem 0 2.5rem;
+
+  .splide__arrow {
+    background: white;
+    border: 1px solid $sand-mid;
+    opacity: 1;
+    width: 2.2rem;
+    height: 2.2rem;
+
+    svg { fill: $forest-deep; }
+
+    &:hover {
+      background: $forest-deep;
+      border-color: $forest-deep;
+      svg { fill: white; }
+    }
+  }
+
+  .splide__arrow--prev { left: -1.2rem; }
+  .splide__arrow--next { right: -1.2rem; }
+
+  .splide__pagination {
+    bottom: -1.8rem;
+
+    .splide__pagination__page {
+      background: $sand-mid;
+      opacity: 1;
+      width: 8px;
+      height: 8px;
+
+      &.is-active {
+        background: $forest-deep;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .splide__slide {
+    padding-bottom: 0.25rem;
+  }
 }
 
 .project-card {
