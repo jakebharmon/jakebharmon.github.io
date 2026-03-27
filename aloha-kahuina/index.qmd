@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 My journey into public health started as an EMT. When our fire department launched a Community Paramedicine program (designed to divert frequent, non-emergency callers from costly hospital trips) a colleague with her new MPH asked me to help evaluate it. While my sociology background was the initial hook, what really captured me was the data underneath. That experience showed me the power of systems thinking in public health, and it pushed me back to school to study epidemiology.
 
-The past two years have been a tremendous learning experience. I've had the chance to work with a scintillating mosaic of public health stakeholders on high impact projects:
+The past two years have been a tremendous learning experience. I've had the chance to work alongside a scintillating mosaic of public health stakeholders on high impact projects:
 
 ::: {.section-label}
 Stakeholder Collaboration
@@ -48,8 +48,8 @@ Stakeholder Collaboration
 
 ## Community / NGO
 
-- **Council of State and Territorial Epidemiologists** — Workforce development, data modernization research, cost-effictiveness of federal dollars
-- **Community Health Aligning Revitalization Reselience & Sustainability** — Environmental health initiatives in West Atlanta
+- **Council of State and Territorial Epidemiologists** — Workforce development, data modernization research, cost-effectiveness of federal dollars
+- **Community Health Aligning Revitalization Resilience & Sustainability** — Environmental health initiatives in West Atlanta
 - **Emory Oaks** — Autism support programming at Emory University
 - **Southern Alliance for Public Health Leadership** — VFC provider mapping and childhood immunization access analysis
 
@@ -61,17 +61,17 @@ Stakeholder Collaboration
 
 :::
 
-In the spirit of "Ka Huina", one of my most impactful partnerships was a project evaluating the state of the epidemiology workforce in the Pacific Territories and Freely Associated States. I spent a month conducting late-night, eastern time zone focus groups with Public Heath representatives from the Pacific to learn how CSTE could better support their activities, so, when I got to meet some of them in person at our 2025 Conference, it felt like seeing old friends.
+One of my most meaningful partnerships was evaluating the epidemiology workforce across the Pacific Territories and Freely Associated States. I spent a month conducting late-night focus groups with Public Health representatives from the Pacific to learn how CSTE could better support their activities, so when I got to meet some of them in person at our 2025 Conference, it felt like seeing old friends.
 
 ::: {.conference-photo}
 
-![Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference](images/cste_pacific_island.jpg){fig-alt="Jake Harmon with Pacific Island epidemiologists at the CSTE Annual Conference" style="width:100%; border-radius:6px;"}
+![Me with Pacific Island epidemiologists at the CSTE Annual Conference in Grand Rapids, Michigan](images/cste_pacific_island.jpg){fig-alt="Grand Rapids, Michigan 2025" style="width:100%; border-radius:6px;"}
 
 :::
 
 ## The Work {#the-work}
 
-Being a data-oriented person, I harness digital technologies to facilitate communication and teamwork. At CSTE, I created our organizations first-ever GitHub repository to improve collaborative analysis and to preserve our code for the future. Because many of my CSTE projects include sensitive data, however, I wanted to share some examples of other public-facing, communication projects I've created in order to give the team not just a sense of my breadth of experience, but to excite you with new ideas of how we could potentially engage our partners.
+As a data-oriented person, I harness digital technologies to facilitate communication, learning, and teamwork. I've selected a few public-facing projects. Across the variety of topics and tools, the through-line is the same: comprehensible, reproducible data flows - a commitment I see as equally owed to the scientific method, to partners, and to the public.
 
 ```{=html}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -87,14 +87,14 @@ Being a data-oriented person, I harness digital technologies to facilitate commu
           <h3>K-Anonymity Simulation</h3>
           <p>The project creates four progressive scenarios showing the delicate balance between making data publicly available and upholding HIPAA protections — with 3D Plotly visualizations that make the tradeoffs tangible.</p>
           <a href="https://github.com/jakebharmon/k_anon_simulation" class="card-link" target="_blank">View on GitHub</a>
-          <a href="https://www.youtube.com/watch?v=LonP1WvUlok" class="card-link" target="_blank">Watch Example Video</a>
+          <a href="https://www.youtube.com/watch?v=whm9FHYaQrk" class="card-link" target="_blank">Watch Example Video</a>
         </div>
       </li>
 
       <li class="splide__slide">
         <div class="project-card">
           <div class="card-category">Infectious Disease Modeling</div>
-          <h3>Influenza A-B Modeling Paper</h3>
+          <h3>Influenza A-B Modeling</h3>
           <p>Coursework under Dr. Chowell at GSU, this document examines a two-strain influenza model using Bayesian statistics. Built as a fully reproducible research document — the kind of transparent workflow that builds trust and insight.</p>
           <a href="https://github.com/jakebharmon/PH8280_id_modeling/blob/main/manuscript/bayes_flu_manuscript.qmd" class="card-link" target="_blank">View QMD Source</a>
           <a href="https://github.com/jakebharmon/PH8280_id_modeling/raw/refs/heads/main/manuscript/bayes_flu_manuscript.docx" class="card-link" target="_blank">Download Manuscript (.docx)</a>
@@ -142,11 +142,13 @@ Being a data-oriented person, I harness digital technologies to facilitate commu
 
 ## Why Kahuina {#why-kahuina}
 
-I love the pace and variety of Kahuina's portfolio — pressing public health matters, work across different partners across different levels and sectors - and I've seen firsthand at CSTE how this kind of agility drives real innovation. From my research on how health departments are modernizing their data flows, I understand the future of epidemiology and informatics to be the same thing. I'm genuinely excited about the emerging technologies such as syndromic surveillance and wastewater surveillance, and I want to be part of forging this new horizon of public health.
+Early in my time at CSTE, I sat in on calls where the Kahuina team was presenting their work on a LEARN course to my manager. My internship had just started, so I was mostly listening, trying to understand what good looked like in this field. The way the consultants shared their work and their thought process was instructive for me, as I would soon begin work on a similar course about data privacy.
+
+Having learned more about the company since, I love the pace and variety of Kahuina's portfolio — pressing public health challenges across different partners and sectors. I understand the future of epidemiology and informatics to be converging, and I'm genuinely excited about emerging technologies such as syndromic surveillance and [wastewater surveillance](https://www.cambridgeday.com/2026/03/18/cambridge-company-tracks-wastewater/) — and to help forge that horizon alongside Kahuina.
 
 ## Why Jake Harmon {#why-jake-harmon}
 
-But beyond the work itself, what matters is how you do it. I've learned that collaboration isn't just a nice-to-have, but rather how you build something that works. And I've learned that the difference between a "good solution" and a solution a partner will *actually use* often comes down to details. At CSTE, I composed parameterized reports housed in a GitHub repository because the partners needed version control and remote access. At DPH, I produced the same sort of reports as local, desktop-runnable files because we needed off-line, easily workable solutions. Same skill set, different execution. That's what I bring: the attentiveness to understand what a partner actually needs, and the flexibility to deliver it right.
+But beyond the work itself, what matters is how you do it. I've learned that collaboration is essential, and that trust relies on setting aside one-size-fits-all solutions. At CSTE, I composed parameterized reports housed in a GitHub repository because the partners needed version control and remote access. At DPH, I produced the same sort of reports as local, desktop-runnable files because we needed off-line, easily workable solutions. Same skill set, different execution. That's what I bring: the attentiveness to understand what a partner actually needs, and the flexibility to deliver it right. Ultimately, methodical questioning and an attentive ear matter just as much as cutting-edge tech when shaping systems that deliver the public the safety and wellbeing they deserve.
 
 Aloha,
 
