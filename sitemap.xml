@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jakebharmon.github.io/posts/04_01_2001/happy_birthday.html</loc>
-    <lastmod>2026-03-27T13:27:55.386Z</lastmod>
-  </url>
-  <url>
-    <loc>https://jakebharmon.github.io/blog.html</loc>
-    <lastmod>2026-03-27T13:27:55.385Z</lastmod>
-  </url>
-  <url>
     <loc>https://jakebharmon.github.io/index.html</loc>
-    <lastmod>2026-03-27T13:27:55.385Z</lastmod>
+    <lastmod>2026-04-25T16:30:55.020Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jakebharmon.github.io/cv.html</loc>
+    <lastmod>2026-04-25T16:30:55.020Z</lastmod>
   </url>
   <url>
     <loc>https://jakebharmon.github.io/aloha-kahuina/index.html</loc>
-    <lastmod>2026-03-27T13:27:55.385Z</lastmod>
+    <lastmod>2026-04-25T16:30:55.019Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jakebharmon.github.io/blog.html</loc>
+    <lastmod>2026-04-25T16:30:55.020Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jakebharmon.github.io/posts/04_01_2001/happy_birthday.html</loc>
+    <lastmod>2026-04-25T16:30:55.020Z</lastmod>
   </url>
 </urlset>

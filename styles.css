@@ -1,0 +1,192 @@
+/* ── Variables ─────────────────────────────── */
+:root {
+  --bg:           #f5f0e8;
+  --text:         #1a0f00;
+  --muted:        #6b5a3e;
+  --accent:       #005aff;
+  --accent-hover: #0040cc;
+  --border:       #d9cdb8;
+  --code-bg:      #ede8dc;
+  --max-w:        680px;
+}
+
+/* ── Reset ─────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0 1.5rem;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Navbar ────────────────────────────────── */
+.site-nav {
+  border-bottom: 1px solid var(--border);
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+.site-nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-brand:hover { color: var(--text); text-decoration: none; }
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+/* ── Typography ────────────────────────────── */
+h1 { font-size: 2rem;    margin: 0 0 0.4rem; }
+h2 { font-size: 1.35rem; margin: 2rem 0 0.4rem; }
+h3 { font-size: 1.1rem;  margin: 1.5rem 0 0.3rem; }
+h4 { font-size: 1rem;    margin: 1.2rem 0 0.25rem; }
+
+p { margin: 0 0 1rem; }
+
+a           { color: var(--accent); text-decoration: none; }
+a:hover     { color: var(--accent-hover); text-decoration: underline; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--border);
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  color: var(--muted);
+}
+
+/* ── Code ──────────────────────────────────── */
+code {
+  font-family: ui-monospace, 'Cascadia Code', 'Courier New', monospace;
+  font-size: 0.875em;
+  background: var(--code-bg);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+pre code { background: none; padding: 0; }
+
+/* ── Blog listing ──────────────────────────── */
+.quarto-listing { margin-top: 0.5rem; }
+
+.quarto-listing .list-group {
+  padding: 0;
+  list-style: none;
+}
+
+.quarto-listing .list-group-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 0.65rem 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.quarto-listing .list-group-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.quarto-listing .listing-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  min-width: 6.5rem;
+}
+
+.quarto-listing .listing-title { flex: 1; }
+.quarto-listing .listing-title a { color: var(--text); }
+.quarto-listing .listing-title a:hover { color: var(--accent); text-decoration: none; }
+
+/* ── CV ────────────────────────────────────── */
+.cv-section { margin-bottom: 2.25rem; }
+
+.cv-section h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+  margin: 0 0 1rem;
+}
+
+.cv-entry { margin-bottom: 1.1rem; }
+
+.cv-title { font-weight: bold; }
+
+.cv-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ── Footer ────────────────────────────────── */
+#quarto-footer,
+.nav-footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  h1   { font-size: 1.6rem; }
+
+  .navbar > .container,
+  .navbar > .container-fluid { flex-wrap: wrap; gap: 0.75rem; }
+
+  .navbar-nav { gap: 0.9rem; }
+
+  .quarto-listing .list-group-item { flex-direction: column; gap: 0.1rem; }
+  .quarto-listing .listing-date   { min-width: unset; }
+}
