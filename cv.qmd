@@ -1,0 +1,100 @@
+---
+title: "CV"
+page-layout: full
+---
+
+<div class="cv-section">
+<h2>Contact</h2>
+<div class="cv-entry">
+<span class="cv-title">Jake Harmon</span><br>
+[jakebluesharmon@gmail.com](mailto:jakebluesharmon@gmail.com) · [github.com/jakebharmon](https://github.com/jakebharmon) · [LinkedIn](#)
+</div>
+</div>
+
+<div class="cv-section">
+<h2>Education</h2>
+
+<div class="cv-entry">
+<span class="cv-title">M.P.H., Environmental Epidemiology</span><br>
+<span class="cv-meta">Georgia State University · Expected [Year]</span>
+</div>
+
+<div class="cv-entry">
+<span class="cv-title">[Degree], [Field]</span><br>
+<span class="cv-meta">[Institution] · [Year]</span>
+</div>
+
+</div>
+
+<div class="cv-section">
+<h2>Experience</h2>
+
+<div class="cv-entry">
+<span class="cv-title">[Position Title]</span><br>
+<span class="cv-meta">[Organization] · [Start]–[End]</span>
+
+- [Responsibility or accomplishment]
+- [Responsibility or accomplishment]
+</div>
+
+<div class="cv-entry">
+<span class="cv-title">EMT / Community Paramedic</span><br>
+<span class="cv-meta">[Organization] · [Start]–[End]</span>
+
+- [Responsibility or accomplishment]
+</div>
+
+</div>
+
+<div class="cv-section">
+<h2>Research & Projects</h2>
+
+<div class="cv-entry">
+<span class="cv-title">K-Anonymity Simulation</span><br>
+<span class="cv-meta">Data Privacy · [Year]</span>
+
+[Brief description of the project and methods.]
+</div>
+
+<div class="cv-entry">
+<span class="cv-title">Influenza A/B Modeling</span><br>
+<span class="cv-meta">Infectious Disease Epidemiology · [Year]</span>
+
+[Brief description of the project and methods.]
+</div>
+
+<div class="cv-entry">
+<span class="cv-title">Vaccines for Children — Geospatial Analysis</span><br>
+<span class="cv-meta">[Year]</span>
+
+[Brief description of the project and methods.]
+</div>
+
+</div>
+
+<div class="cv-section">
+<h2>Skills</h2>
+
+<div class="cv-entry">
+<span class="cv-meta">Languages & Tools</span><br>
+R, [Python?], SQL, Quarto, Git
+
+<span class="cv-meta">Methods</span><br>
+Epidemiological study design, spatial analysis, survival analysis, data privacy
+</div>
+
+</div>
+
+<div class="cv-section">
+<h2>Publications & Presentations</h2>
+
+<div class="cv-entry">
+<span class="cv-title">[Presentation Title]</span><br>
+<span class="cv-meta">CSTE Annual Conference · Grand Rapids, MI · 2025</span>
+</div>
+
+<div class="cv-entry">
+[Add publications here in your preferred citation format.]
+</div>
+
+</div>

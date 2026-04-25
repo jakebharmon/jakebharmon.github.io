@@ -1,11 +1,5 @@
-# freeze computational output
 freeze: true
-
-# Enable banner style title blocks
 title-block-banner: false
-
-# Table of content settings
 toc: true
-toc-depth: 3
-
+toc-depth: 2
 page-layout: article

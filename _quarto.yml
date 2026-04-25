@@ -2,9 +2,21 @@ project:
   type: website
 
 website:
-  title: "Jake Blues Harmon"
+  title: "Jake Harmon"
   site-url: https://jakebharmon.github.io
-  description: "This is Jake Harmon's personal blog."
+  description: "Environmental epidemiologist. Writing about science, Sacred Harp, and literature."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: CV
+      - href: blog.qmd
+        text: Blog
+    right:
+      - icon: rss
+        href: blog.xml
+        aria-label: RSS
 
 format:
   html:
@@ -13,6 +25,7 @@ format:
     css: styles.css
     toc: false
     anchor-sections: false
+    include-before-body: _navbar.html
 
 execute:
   freeze: auto

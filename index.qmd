@@ -1,11 +1,8 @@
 ---
+title: ""
 page-layout: full
 ---
 
-## Ahoy-hoy![^1]
+# Ahoy!
 
-[^1]: My preferred salutation following Alexander Graham Bell's example
-
-I am currently a graduate student studying Environmental Epidemiology at Georgia State University. This blog is for sharing my thoughts about Sacred Harp, literature, faith, social democracy, and other amalgamated interests of mine.
-
-[wikipedia](wikipedia.com)
+My name is Jake. I'm an epidemiologist, and a perpetual learner. Please peruse my blog to learn more about my amalgamated interests and data projects.
