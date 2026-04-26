@@ -4,28 +4,17 @@ project:
 website:
   title: "Jake Harmon"
   site-url: https://jakebharmon.github.io
-  description: "Environmental epidemiologist. Writing about science, Sacred Harp, and literature."
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - href: cv.qmd
-        text: CV
-      - href: blog.qmd
-        text: Blog
-    right:
-      - icon: rss
-        href: blog.xml
-        aria-label: RSS
+  description: "Blog of an epidemiologist exploring culture, economics, and data."
 
 format:
   html:
     theme: none
     minimal: true
     css: styles.css
+    include-before-body: _navbar.html
     toc: false
     anchor-sections: false
-    include-before-body: _navbar.html
+
 
 execute:
   freeze: auto

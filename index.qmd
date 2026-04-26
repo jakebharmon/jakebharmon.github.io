@@ -6,3 +6,13 @@ page-layout: full
 # Ahoy!
 
 My name is Jake. I'm an epidemiologist, and a perpetual learner. Please peruse my blog to learn more about my amalgamated interests and data projects.
+
+
+--- 
+
+<center>
+Atlanta, GA | [GitHub](https://github.com/jakebharmon) | [LinkedIn](https://www.linkedin.com/in/jake-harmon-blues) | 
+[ORCiD](https://orcid.org/0009-0003-2004-4203)
+</center>
+
+---
