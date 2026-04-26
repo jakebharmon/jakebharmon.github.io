@@ -5,14 +5,6 @@ format:
     format-links: false
     css: styles.css
     body-classes: cv-page
-  pdf:
-    documentclass: article
-    geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
-    fontsize: 11pt
-    include-in-header:
-      text: |
-        \usepackage{titlesec}
-        \titlespacing*{\section}{0pt}{12pt}{8pt}
 ---
 
 ## Education
